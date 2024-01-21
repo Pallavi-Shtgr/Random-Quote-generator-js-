@@ -13,7 +13,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #5327f0
+    background: #b7aae5
 }
 .wrapper{
     width: 650px;
@@ -91,8 +91,28 @@ content .quote-area{
     height: 46px;
     width: 46px;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border: 2px solid #5327f0;
+    border: 2px solid #7350f5;
+    transform: all 0.3 ease;
+}
+
+.features ul li:hover{
+    color: #fff;
+    background:#5327f0;
+}
+
+.features button{
+    border: none;
+    outline: none;
+    background: #5327f0;
+    color: #fff;
+    cursor: pointer;
+    font-style: 16px;
+    padding: 13px 22px;
+    border-radius: 30px;
+
+
 }
