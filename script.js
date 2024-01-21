@@ -15,13 +15,6 @@ function randomQuote() {
       authorName.innerText = result.author;
       quoteBtn.innerText = "New Quote";
       quoteBtn.classList.remove("loading");
-    })
-    .catch((error) => {
-      console.error("Error fetching quote:", error);
-      quoteText.innerText = "Failed to fetch quote";
-      authorName.innerText = "";
-      quoteBtn.innerText = "Retry";
-      quoteBtn.classList.remove("loading");
     });
 }
 
@@ -31,11 +24,11 @@ soundBtn.addEventListener("click", () => {
 });
 
 copyBtn.addEventListener("click", () => {
-  navigator.clipboard.writeText(quoteText.innerText);
+  navigator.clipboard.writeText(`${quoteText.innerText} - ${authorName.innerText}`);
 });
 
 twitterBtn.addEventListener("click", () => {
-  let tweetUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(quoteText.innerText)}`;
+  let tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${quoteText.innerText} - ${authorName.innerText}`)}`;
   window.open(tweetUrl, "_blank");
 });
 
