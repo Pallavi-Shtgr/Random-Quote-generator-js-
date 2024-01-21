@@ -7,3 +7,17 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #5327f0
+}
+.wrapper{
+    width: 650px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px 30px 25px;
+}
